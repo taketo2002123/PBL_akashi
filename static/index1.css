@@ -1,0 +1,128 @@
+* {
+	float: none;
+	position: static;
+}
+ 
+img {
+	max-width: 100%;
+	height: auto;
+}
+body {
+    background-color:#CCFFFF;
+  }
+@media screen and (min-width:481px) {
+  h1 {
+    border-bottom: 40px solid #000055;
+    width: none;
+    text-shadow: 1px 2px 5px #333;
+  }
+  
+  .cover {
+    width: 400px;
+    height: 534px;
+    background-image:url("images/success.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+  }
+  
+  div.radius1 {
+    border: 5px solid #333333;
+    text-align: center;
+    font-size: 10pt;
+    text-shadow: 1px 2px 5px #333;
+    line-height:0px;
+  
+  
+   border-radius: 10px;
+   margin-right: 10px;
+   width: 500px;
+   height: 200px;
+   padding: 10px;
+   display: inline-block;
+   position:relative;
+          bottom:500px;
+          left:645px;
+   background: #FFFFFF
+  
+  }
+  
+  div.radius2 {
+   border: 5px solid #333333;
+   text-align: center;
+   font-size: 10pt;
+   text-shadow: 1px 2px 5px #333;
+   line-height:0px;
+  
+  
+   border-radius: 10px;
+   margin-right: 10px;
+   width: 500px;
+   height: 200px;
+   padding: 10px;
+   display: inline-block;
+   position:relative;
+          bottom:200px;
+          left:100px;
+   background: #FFFFFF 
+  }
+    /* ここにパソコン版だけの記述 */
+  }
+   
+@media screen and (max-width:480px) {
+  h1 {
+    border-bottom: 40px solid #000055;
+    width: none;
+    text-shadow: 1px 2px 5px #333;
+  }
+  
+  .cover {
+    width: 200px;
+    height: 234px;
+    background-image:url("images/success.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+  }
+  
+  div.radius1 {
+    border: 5px solid #333333;
+    text-align: center;
+    font-size: 10pt;
+    text-shadow: 1px 2px 5px #333;
+    line-height:0px;
+  
+  
+   border-radius: 10px;
+   margin-right: 10px;
+   width: 300px;
+   height: 200px;
+   padding: 10px;
+   display: inline-block;
+   position:relative;
+          bottom:250px;
+          left:245px;
+   background: #FFFFFF
+  
+  }
+  
+  div.radius2 {
+   border: 5px solid #333333;
+   text-align: center;
+   font-size: 30pt;
+   text-shadow: 1px 2px 5px #333;
+   line-height:30px;
+  
+  
+   border-radius: 10px;
+   margin-right: 10px;
+   width: 500px;
+   height: 200px;
+   padding: 10px;
+   display: inline-block;
+   position:relative;
+          bottom:200px;
+          left:20px;
+   background: #FFFFFF 
+  }  
+    /* ここにスマホ版だけの記述 */
+  }  
+  
