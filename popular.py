@@ -20,7 +20,7 @@ def db_sample():
        id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
        name VARCHAR(50) NULL,
        password VARCHAR(300) NULL,
-       gender ENUM('F','M'),
+       gender VARCHAR(3) NULL,
        columm VARCHAR(50) NULL
     )'''
     cur.execute(sql)

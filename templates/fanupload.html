@@ -140,10 +140,10 @@
         <div id="margin">
             <div class="main-block" id="wf-nicomoji">
                 <p id="lg-font" style="color:rgb(120, 148, 233);">「fanclub site」</p>
-                <a id="mid-font" href="fannewlogin">ファン新規登録</a>
-                <a id="mid-font" href="fanlogin">ファンログイン</a>
-                <a id="mid-font" href="popularnewlogin">有名人新規登録</a>
-                <a id="mid-font" href="popularlogin">有名人ログイン</a>           
+                <a id="mid-font" href="fanindex">有名人検索</a>
+                <a id="mid-font" href="collumindex">配信分野コメント検索</a>
+                <a id="mid-font" href="fanupload">プロフィール更新</a>
+                <a id="mid-font" href="fanlogout">ログアウト</a>               
 
             </div> <!--ここは一番上のやつ-->
         </div>
@@ -152,21 +152,58 @@
         <div id="margin" style="background-color:rgb(225, 229, 237) ;">
             <div id="sans-jp1">
                 <div class="main-block"  style="background-color:azure; color:black;">
-                    <h1 id="u-bar">新規登録NG</h1>
+                    <h1 id="u-bar">ファン更新</h1>
                 </div>
             </div>
 
             <div class="main-block" style="background-color:azure; color:black;">
                 <div id="flex3">
                     <p id="wf-sawarabigothic">  
-                        　同姓同名の人がすでにいます。もしくは条件を満たしていません。<br>
-                                          
+                        　ファン更新では以下の情報を入力してもらいます。<br>
+                        　名前　パスワード　性別                 
                     </p>
                 </div>
             </div>
         </div>
 
         <!--ぷろふ-->
+        <div id="prof"></div>
+        <div id="margin" style="background-color:rgb(225, 229, 237) ;">
+            <div id="sans-jp1">
+                <div class="main-block"  style="background-color:azure; color:black;">
+                    <h1 id="u-bar">入力フォーム</h1>
+                </div>
+            </div>
+
+            <div class="main-block" style="background-color:azure; color:black;">
+              
+                <div id="flex3">
+                    <p id="wf-sawarabigothic">
+                        　<P>名前入力</P>
+                            <form action="fanuploadfunction" method="post" id="upload-form" >
+                                <label for="name-form"></label> <br/>
+                                <input name="user" type="text" id="name-form" placeholder="名前を入力してください"><br/>
+                                <br/>
+                                <P>パスワード入力</P>
+                                <label for="name-form"></label> <br/>
+                                <input name="pass" type="text" id="name-form" placeholder="4文字以上"><br/>
+                                <br/>
+                                
+                                <p>性別選択</p>
+                                <select name="sel">
+                                    <option value="女性">女性</option>
+                                    <option value="男性">男性</option>
+                                </select>
+                                <br/>
+                                <input type="submit" value="アップロード"/>
+                                
+                            </form>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+      
         
 
         <!--top-->
@@ -182,7 +219,7 @@
                 <div id="flex2">
                     <p id="wf-sawarabigothic" style="font-size:small; text-align: center;">  
                         mail:taketo.akashi.4d@stu.hosei.ac.jp<br>
-                        電話:080-7889-9479<br>    
+                        電話:080-7889-9479<br>   
                         <a id="mid-font" href="title">タイトルに戻る</a>                   
                     </p>
                 </div>

@@ -133,6 +133,17 @@
             }
 
         </style>
+        <script>
+            function sendPost(event) {
+  event.preventDefault();
+  var form = document.createElement('form');
+  form.action = event.target.href;
+  form.method = 'post';
+  document.body.appendChild(form);
+  form.submit();
+}
+
+        </script>
 
     </head>
 
@@ -140,10 +151,11 @@
         <div id="margin">
             <div class="main-block" id="wf-nicomoji">
                 <p id="lg-font" style="color:rgb(120, 148, 233);">「fanclub site」</p>
-                <a id="mid-font" href="fannewlogin">ファン新規登録</a>
-                <a id="mid-font" href="fanlogin">ファンログイン</a>
-                <a id="mid-font" href="popularnewlogin">有名人新規登録</a>
-                <a id="mid-font" href="popularlogin">有名人ログイン</a>           
+                <a id="mid-font" href="fanindex">有名人検索</a>
+                <a id="mid-font" href="collumindex">配信分野コメント検索</a>
+                <a id="mid-font" href="fanupload">プロフィール更新</a>
+                <a id="mid-font" href="fanlogout">ログアウト</a>             
+        
 
             </div> <!--ここは一番上のやつ-->
         </div>
@@ -152,21 +164,63 @@
         <div id="margin" style="background-color:rgb(225, 229, 237) ;">
             <div id="sans-jp1">
                 <div class="main-block"  style="background-color:azure; color:black;">
-                    <h1 id="u-bar">新規登録NG</h1>
+                    <h1 id="u-bar">有名人検索成功</h1>
                 </div>
             </div>
 
             <div class="main-block" style="background-color:azure; color:black;">
                 <div id="flex3">
                     <p id="wf-sawarabigothic">  
-                        　同姓同名の人がすでにいます。もしくは条件を満たしていません。<br>
-                                          
+                        　以下の有名人が見つかりました。<br>
+                        　              
                     </p>
                 </div>
             </div>
         </div>
 
         <!--ぷろふ-->
+        {% for arr in arr %} 
+        <div id="prof"></div>
+        <div id="margin" style="background-color:rgb(225, 229, 237) ;">
+            <div id="sans-jp1">
+                <div class="main-block"  style="background-color:azure; color:black;">
+                    <h1 id="u-bar">検索結果</h1>
+                </div>
+            </div>
+
+            <div class="main-block" style="background-color:azure; color:black;">
+                <table id="flex1">
+                    <tbody>
+                        <tr>
+                            <th>タイトル</th>
+                            <td>{{arr[0]}}</td>
+                        </tr>
+                        <tr>
+                            <th>コメント</th>
+                            <td>{{arr[1]}}</td>
+                        </tr>
+                        <tr>
+                            <th>写真</th>
+                            <td><img src="./static/images/{{name}}/{{arr[2]}}" alt="Dinosaur" width="30%" height="30%"></td>
+                        </tr> 
+                        <tr>
+                            <th>投稿者</th>
+                            <td>{{arr[3]}}</td>
+                        </tr> 
+                        <tr>
+                            <th>カテゴリ</th>
+                            <td>{{arr[4]}}</td>
+                        </tr> 
+                                        
+
+                    </tbody>            
+                </table>
+                
+            </div>
+        </div>
+        {% endfor %}  
+
+      
         
 
         <!--top-->
@@ -182,8 +236,8 @@
                 <div id="flex2">
                     <p id="wf-sawarabigothic" style="font-size:small; text-align: center;">  
                         mail:taketo.akashi.4d@stu.hosei.ac.jp<br>
-                        電話:080-7889-9479<br>    
-                        <a id="mid-font" href="title">タイトルに戻る</a>                   
+                        電話:080-7889-9479<br>   
+                        <a id="mid-font" href="fanhome">ホームに戻る</a>                   
                     </p>
                 </div>
             </div>

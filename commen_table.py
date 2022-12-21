@@ -8,7 +8,7 @@ def db_sample():
             user='root',
             passwd='20020123aA',
             host='localhost',
-            db='ファン',
+            db='popular',
             charset="utf8")
  
     # カーソルを取得する
@@ -16,11 +16,13 @@ def db_sample():
      
     # クエリを実行する
     sql =  '''
-    CREATE TABLE fan(
+    CREATE TABLE comment(
        id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-       name VARCHAR(50) NULL,
-       password VARCHAR(300) NULL,
-       gender VARCHAR(3) NULL
+       title VARCHAR(50) NULL,
+       comment VARCHAR(1000) NULL,
+       image VARCHAR(1000) NULL,
+       poster VARCHAR(50) NULL,
+       columm VARCHAR(50) NULL
     )'''
     cur.execute(sql)
  

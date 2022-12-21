@@ -81,10 +81,6 @@
             #flex2 {
                 flex-basis: 55%;
             }
-            #flex3 {
-                flex-basis: 100%;
-                text-align: center;
-            }
 
             .sub-block{
                 background-color: blue;
@@ -140,10 +136,10 @@
         <div id="margin">
             <div class="main-block" id="wf-nicomoji">
                 <p id="lg-font" style="color:rgb(120, 148, 233);">「fanclub site」</p>
-                <a id="mid-font" href="fannewlogin">ファン新規登録</a>
-                <a id="mid-font" href="fanlogin">ファンログイン</a>
-                <a id="mid-font" href="popularnewlogin">有名人新規登録</a>
-                <a id="mid-font" href="popularlogin">有名人ログイン</a>           
+                <a id="mid-font" href="popularcomment">コメント追加</a>
+                <a id="mid-font" href="popularupload">プロフィール更新</a>
+                <a id="mid-font" href="populardelete">コメント削除</a>
+                <a id="mid-font" href="popularlogout">ログアウト</a>             
 
             </div> <!--ここは一番上のやつ-->
         </div>
@@ -152,21 +148,60 @@
         <div id="margin" style="background-color:rgb(225, 229, 237) ;">
             <div id="sans-jp1">
                 <div class="main-block"  style="background-color:azure; color:black;">
-                    <h1 id="u-bar">新規登録NG</h1>
+                    <h1 id="u-bar">fanclub site</h1>
                 </div>
             </div>
 
             <div class="main-block" style="background-color:azure; color:black;">
-                <div id="flex3">
+                <div id="flex2">
                     <p id="wf-sawarabigothic">  
-                        　同姓同名の人がすでにいます。もしくは条件を満たしていません。<br>
-                                          
+                        <P>コメントや画像を投稿できます！</P>
+                        <form action="popularcommentok" method="post" id="upload-form" enctype=multipart/form-data>
+                            <br/><p>コメントタイトル</p>
+                            <label for="name-form"></label> <br/>
+                                <input name="title" type="text" id="name-form" ><br/>
+                                <br/>
+                                <p>配信分野選択</p>
+                                <select name="col">
+                                    <option value="スポーツ">スポーツ</option>
+                                    <option value="アイドル">アイドル</option>
+                                    <option value="配信者">配信者</option>
+                                    <option value="歌い手">歌い手</option>
+                                    <option value="ゲーム">ゲーム</option>
+                                    <option value="何でも">何でも</option>
+                                </select><br/>
+                            <label for="t_message">コメント内容</label><br/>
+                            <textarea id="t_message" name="comment" placeholder="こちらにコメントを入力してください。"></textarea><br/>
+                        <label for="name">投稿(画像、pdfなどetc)</label>
+                        <input type="file"  name="file" >    
+                        <br/>
+                            <input type="submit" value="アップロード"/>     
+                        </form>
                     </p>
                 </div>
             </div>
         </div>
 
         <!--ぷろふ-->
+        <div id="prof"></div>
+        <div id="margin" style="background-color:rgb(225, 229, 237) ;">
+            <div id="sans-jp1">
+                <div class="main-block"  style="background-color:azure; color:black;">
+                    <h1 id="u-bar">Profile</h1>
+                </div>
+            </div>
+
+            <div class="main-block" style="background-color:azure; color:black;">
+                <div id="flex2">
+                    <p id="wf-sawarabigothic">
+                        　json形式であなたの情報を出力します<br>
+                        　<a href= "send" >webAPIasJSON</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+      
         
 
         <!--top-->
@@ -182,15 +217,10 @@
                 <div id="flex2">
                     <p id="wf-sawarabigothic" style="font-size:small; text-align: center;">  
                         mail:taketo.akashi.4d@stu.hosei.ac.jp<br>
-                        電話:080-7889-9479<br>    
-                        <a id="mid-font" href="title">タイトルに戻る</a>                   
+                        電話:080-7889-9479<br>                      
                     </p>
                 </div>
             </div>
         </div>
     </body>
 </html>
-
-
-
-
